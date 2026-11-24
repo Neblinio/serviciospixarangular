@@ -1,0 +1,25 @@
+<h1>Personajes Pixar</h1>
+<table class="table table-warning">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Película</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (personaje of arraypersonajes; track personaje) {
+            <tr>
+                <th>{{personaje.idPersonaje}}</th>
+                <th>{{personaje.nombre}}</th>
+                <th><img style="width: 100px;" src="{{personaje.imagen}}" alt=""></th>
+                <th>{{personaje.pelicula}}</th>
+                <th>
+                    <button class="btn btn-danger" (click)="eliminarPersonaje(personaje.idPersonaje)">Eliminar</button>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>

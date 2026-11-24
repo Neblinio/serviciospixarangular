@@ -1,0 +1,11 @@
+<h2>Crear personaje</h2>
+<form #form="ngForm">
+    Nombre:
+    <input type="text" #cajanombre name="cajanombre" class="form-control">
+    Imagen:
+    <input type="text" #cajaimagen name="cajaimagen" class="form-control">
+    Película:
+    <input type="text" #cajapelicula name="cajapelicula" class="form-control">
+    <button (click)="insertarPersonaje()">Insertar</button>
+</form>
+<h3 style="color: navy;">{{mensaje}}</h3>
